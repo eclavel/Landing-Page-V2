@@ -1,0 +1,170 @@
+/*CSS reset, all elements will have 
+zero margin and padding for all browsers*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*setting  height of the window*/
+body,html{
+    min-height: 100vh;
+}
+/*background*/
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/*Header*/
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    /*higher the index the more priority it gives
+    index of -1 is the least*/
+    z-index: 5;
+    background-color: darkslateblue;
+    opacity: 0.94;
+}
+.logo,
+nav{
+    display: flex;
+    flex:1;
+    font-size: 2rem;
+}
+.logo *{
+    font-size: 2.8rem;
+}
+nav{
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.headerLinks{
+    display: flex;
+    /*Removes dot before unordered list*/
+    list-style: none;
+    gap: 1.5rem;
+}
+/*hamburger style link*/
+.hamburger {
+    display: none;
+  }  
+
+/*unvisited link*/
+a:link{
+    color: black;
+    /*Removes underline from link*/
+    text-decoration: none;
+}
+/*visited link*/
+a:visited{
+    color: pink;
+}
+/*hover over link*/
+a:hover{
+    color: blueviolet;
+}
+
+/*space for image before content*/
+.emptySpace{
+    min-height: 100vh;
+}
+
+/*Content in the middle*/
+.container{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap: 2rem;
+}
+.required-info{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    background: rgba(172, 132, 168, .5);
+    z-index: 2;
+}
+.required-info .title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    border: 4px ridge black;
+}
+.required-info .imgPageContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.required-info .imgPageContainer div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.4rem;
+    width: 45%;
+    height: 11rem;
+}
+
+.required-info .imgPageContainer div img{
+    border-radius: 1rem;
+    height: 70%;
+}
+.quote{
+    padding: 1rem 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 3rem;
+    background: rgba(72,61,139,.8);
+}
+
+.signup-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+}
+button{
+    width: 10rem;
+    height: 2rem;
+    border-radius: .5rem;
+    font-weight: 900;
+    font-size: large;
+    background-color: rgb(228, 157, 168);
+    z-index: 1;
+}
+
+button:hover{
+    background-color: darkslateblue;
+}
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    height: 3rem;
+
+}
+
+@media (max-width: 600px) {
+    .hamburger{
+        display: flex;
+    }
+    .headerLinks{
+        position: fixed;
+        left: -100%;
+        top:3rem;
+        gap:0;
+        flex-direction: column;
+        background-color: darkslateblue;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+    }
+    .headerLinks.active{
+        left:0;
+    }
+
+}
