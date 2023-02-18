@@ -94,6 +94,7 @@ a:hover{
     font-size: 2rem;
     font-family: Impact, fantasy;
     border: 4px ridge black;
+    box-shadow: 0px 4px;
 }
 .required-info .imgPageContainer{
     display: flex;
@@ -110,6 +111,7 @@ a:hover{
 }
 
 .required-info .imgPageContainer div:hover{
+    transition: .85s;
     transform: scale(1.1);
 }
 
