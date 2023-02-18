@@ -150,6 +150,8 @@ button{
 
 button:hover{
     background-color: darkslateblue;
+    transition: .8s;
+    transform: scale(1.4);
     box-shadow: 3px 7px;
 }
 /*footer*/
