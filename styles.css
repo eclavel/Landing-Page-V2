@@ -46,6 +46,7 @@ nav{
     display: flex;
     /*Removes dot before unordered list*/
     list-style: none;
+    font-family: Impact, fantasy;
     gap: 1.5rem;
 }
 /*hamburger style link*/
@@ -91,6 +92,7 @@ a:hover{
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    font-family: Impact, fantasy;
     border: 4px ridge black;
 }
 .required-info .imgPageContainer{
@@ -107,15 +109,24 @@ a:hover{
     height: 11rem;
 }
 
+.required-info .imgPageContainer div:hover{
+    transform: scale(1.1);
+}
+
 .required-info .imgPageContainer div img{
     border-radius: 1rem;
     height: 70%;
+}
+
+.required-info .imgPageContainer div img:hover{
+    box-shadow: 5px 10px;
 }
 .quote{
     padding: 1rem 3rem;
     display: flex;
     flex-flow: row wrap;
     font-size: 3rem;
+    font-family: sans-serif;
     background: rgba(72,61,139,.8);
 }
 
@@ -137,6 +148,7 @@ button{
 
 button:hover{
     background-color: darkslateblue;
+    box-shadow: 3px 7px;
 }
 /*footer*/
 footer{
